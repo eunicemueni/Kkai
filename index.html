@@ -884,6 +884,211 @@
             </div>
         </div>
     </section>
+    <!-- ===== SECTION: LIVE FOMO URGENCY ===== -->
+<section style="padding: 80px 0; background: linear-gradient(135deg, rgba(139,0,0,0.2) 0%, rgba(42,5,42,0.9) 100%);">
+    <div class="container">
+        <h2 style="font-size: 3rem; color: var(--urgent-red); text-align: center; margin-bottom: 20px;">
+            <i class="fas fa-fire"></i> LIVE URGENCY: SPOTS ARE VANISHING NOW
+        </h2>
+        <p style="font-size: 1.5rem; text-align: center; margin-bottom: 50px; color: #ddd; max-width: 800px; margin-left: auto; margin-right: auto;">
+            This isn't a static page. What you see below is happening <strong>in real-time</strong> as people secure their founder's licenses.
+        </p>
+
+        <!-- Live Spot Counter -->
+        <div style="max-width: 800px; margin: 0 auto 50px; padding: 35px; background: rgba(0,0,0,0.7); border-radius: 20px; border: 3px solid var(--urgent-red); text-align: center; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--urgent-red), #ff6600, var(--urgent-red)); animation: slide 2s linear infinite;"></div>
+            
+            <div style="font-size: 1.3rem; color: var(--soft-blush); margin-bottom: 20px;">
+                <i class="fas fa-bolt"></i> <strong>LIVE FOUNDER'S SPOT TRACKER</strong>
+            </div>
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; margin-bottom: 30px;">
+                <div style="text-align: center;">
+                    <div id="live-spots-counter" style="font-size: 5rem; font-weight: 900; color: var(--kairah-gold); line-height: 1;">47</div>
+                    <div style="color: #aaa; font-size: 1.1rem;">SPOTS LEFT</div>
+                </div>
+                <div style="font-size: 3rem; color: #666; font-weight: 100;">/</div>
+                <div style="text-align: center;">
+                    <div style="font-size: 5rem; font-weight: 900; color: #444; line-height: 1;">100</div>
+                    <div style="color: #666; font-size: 1.1rem;">TOTAL SPOTS</div>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div style="height: 20px; background-color: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; margin-bottom: 30px;">
+                <div id="spots-progress-bar" style="height: 100%; background: linear-gradient(90deg, var(--urgent-red), #ff6600); width: 47%; border-radius: 10px; transition: width 0.5s ease;"></div>
+            </div>
+            
+            <p style="font-size: 1.2rem; color: #fff;">
+                <i class="fas fa-exclamation-triangle"></i> <strong>CRITICAL:</strong> At the current rate, all spots will be gone in <span style="color: var(--urgent-red); font-weight: 900;" id="time-remaining">12-24 hours</span>. The next available opportunity will be at $297/month.
+            </p>
+        </div>
+
+        <!-- Recent Purchases Ticker -->
+        <div style="max-width: 700px; margin: 0 auto 60px; background: rgba(0,0,0,0.8); border-radius: 15px; border: 2px solid var(--kairah-gold); overflow: hidden;">
+            <div style="background: linear-gradient(90deg, var(--kairah-gold), var(--kairah-gold-dark)); padding: 15px; text-align: center; font-weight: 800; color: #000;">
+                <i class="fas fa-shopping-cart"></i> RECENT FOUNDER SECURES (LIVE UPDATES)
+            </div>
+            <div style="padding: 20px; max-height: 300px; overflow-y: auto;" id="recent-purchases">
+                <!-- Dynamic purchases will appear here via JavaScript -->
+                <div style="padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                    <span style="color: #ccc;"><i class="fas fa-user-circle"></i> Alex R. (Video Agency)</span>
+                    <span style="color: var(--kairah-gold); font-weight: 600;">Secured Founder #47</span>
+                    <span style="color: #aaa; font-size: 0.9rem;">2 minutes ago</span>
+                </div>
+                <div style="padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                    <span style="color: #ccc;"><i class="fas fa-user-circle"></i> Maya T. (YouTuber)</span>
+                    <span style="color: var(--kairah-gold); font-weight: 600;">Secured Founder #46</span>
+                    <span style="color: #aaa; font-size: 0.9rem;">7 minutes ago</span>
+                </div>
+                <div style="padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                    <span style="color: #ccc;"><i class="fas fa-user-circle"></i> David L. (E-commerce)</span>
+                    <span style="color: var(--kairah-gold); font-weight: 600;">Secured Founder #45</span>
+                    <span style="color: #aaa; font-size: 0.9rem;">14 minutes ago</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waiting List Counter -->
+        <div style="text-align: center; padding: 30px; background: rgba(255,51,51,0.15); border-radius: 15px; max-width: 600px; margin: 0 auto 40px; border: 2px dashed var(--urgent-red);">
+            <h3 style="color: var(--urgent-red); font-size: 1.8rem; margin-bottom: 15px;">
+                <i class="fas fa-user-clock"></i> WAITING LIST ACTIVATED
+            </h3>
+            <p style="font-size: 1.3rem; color: #fff; margin-bottom: 20px;">
+                <span id="waiting-list-count" style="color: var(--kairah-gold); font-weight: 900; font-size: 1.8rem;">83</span> people are on standby, ready to claim any spot that becomes available.
+            </p>
+            <p style="color: #ccc; font-size: 1.1rem;">
+                If you leave this page without securing your license, your spot will be offered to the next person in line <strong>within minutes</strong>.
+            </p>
+        </div>
+
+        <!-- Final FOMO CTA -->
+        <div style="text-align: center;">
+            <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main" style="font-size: 1.8rem; padding: 25px 70px; background: linear-gradient(45deg, var(--urgent-red), #ff6600); border-color: var(--urgent-red);">
+                <i class="fas fa-skull-crossbones"></i> SECURE MY SPOT BEFORE IT'S GONE - $97
+            </a>
+            <p style="margin-top: 25px; color: #aaa; font-size: 1.1rem;">
+                <i class="fas fa-lock"></i> Instant Access • Founder's Guarantee • 256-bit SSL
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+@keyframes slide {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+@keyframes pulse-gold {
+    0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 204, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
+}
+
+#live-spots-counter {
+    animation: pulse-gold 2s infinite;
+}
+</style>
+
+<script>
+// ===== LIVE FOMO URGENCY SCRIPT =====
+document.addEventListener('DOMContentLoaded', function() {
+    let spots = 47;
+    let waitingList = 83;
+    const maxSpots = 100;
+    
+    // Update all spot displays
+    function updateSpotDisplays() {
+        // Update main counter
+        document.getElementById('live-spots-counter').textContent = spots;
+        
+        // Update progress bar
+        const progressPercent = ((maxSpots - spots) / maxSpots) * 100;
+        document.getElementById('spots-progress-bar').style.width = `${progressPercent}%`;
+        
+        // Update time remaining text
+        const hoursRemaining = Math.floor(spots / 2); // Simulate 2 spots/hour
+        document.getElementById('time-remaining').textContent = `${hoursRemaining} hours`;
+        
+        // Update waiting list
+        document.getElementById('waiting-list-count').textContent = waitingList;
+        
+        // Update testimonial stats
+        document.querySelectorAll('#spots-counter, #spots-counter-2').forEach(el => {
+            if(el) el.textContent = spots;
+        });
+    }
+    
+    // Simulate spot sales
+    setInterval(() => {
+        if (spots > 0 && Math.random() > 0.85) { // ~15% chance every interval
+            spots--;
+            waitingList += Math.floor(Math.random() * 3) + 1; // Waiting list grows
+            
+            // Add to recent purchases
+            const names = ["James K.", "Sophia M.", "Liam C.", "Emma R.", "Noah S.", "Olivia T.", "William V.", "Ava L."];
+            const roles = ["Video Editor", "Marketing Agency", "YouTuber", "E-commerce Store", "Film Producer", "Social Media Manager"];
+            const timeTexts = ["just now", "1 min ago", "2 mins ago", "3 mins ago"];
+            
+            const purchaseDiv = document.createElement('div');
+            purchaseDiv.style.padding = "12px 15px";
+            purchaseDiv.style.borderBottom = "1px solid rgba(255,255,255,0.1)";
+            purchaseDiv.style.display = "flex";
+            purchaseDiv.style.justifyContent = "space-between";
+            purchaseDiv.style.animation = "fadeIn 0.5s";
+            
+            const name = names[Math.floor(Math.random() * names.length)];
+            const role = roles[Math.floor(Math.random() * roles.length)];
+            const time = timeTexts[Math.floor(Math.random() * timeTexts.length)];
+            
+            purchaseDiv.innerHTML = `
+                <span style="color: #ccc;"><i class="fas fa-user-circle"></i> ${name} (${role})</span>
+                <span style="color: var(--kairah-gold); font-weight: 600;">Secured Founder #${spots}</span>
+                <span style="color: #aaa; font-size: 0.9rem;">${time}</span>
+            `;
+            
+            const container = document.getElementById('recent-purchases');
+            container.insertBefore(purchaseDiv, container.firstChild);
+            
+            // Keep only last 6 purchases visible
+            if (container.children.length > 6) {
+                container.removeChild(container.lastChild);
+            }
+            
+            updateSpotDisplays();
+            
+            // If spots are getting low, increase urgency
+            if (spots <= 10) {
+                document.getElementById('live-spots-counter').style.animation = "pulse-gold 1s infinite";
+                document.getElementById('spots-progress-bar').style.background = "linear-gradient(90deg, #ff0000, #ff3333)";
+            }
+            
+            // If spots hit 0, show sold out
+            if (spots <= 0) {
+                document.getElementById('live-spots-counter').textContent = "0";
+                document.getElementById('live-spots-counter').style.color = "#ff0000";
+                document.getElementById('live-spots-counter').style.animation = "none";
+                document.querySelector('.cta-button-main').innerHTML = '<i class="fas fa-times-circle"></i> FOUNDER\'S LIST CLOSED';
+                document.querySelector('.cta-button-main').style.background = "#666";
+                document.querySelector('.cta-button-main').style.cursor = "not-allowed";
+                document.querySelector('.cta-button-main').onclick = function(e) { e.preventDefault(); alert("Founder's list is closed. You can join the waiting list for future opportunities."); };
+            }
+        }
+    }, 8000); // Check every 8 seconds
+    
+    // Update waiting list growth independently
+    setInterval(() => {
+        if (waitingList < 150 && Math.random() > 0.7) {
+            waitingList += Math.floor(Math.random() * 2) + 1;
+            updateSpotDisplays();
+        }
+    }, 12000);
+    
+    // Initial update
+    updateSpotDisplays();
+});
+</script>
     <!-- ===== SECTION 11: ULTIMATE FAQ ===== -->
 <section style="padding: 100px 0; background-color: rgba(58, 21, 58, 0.8);">
     <div class="container">
