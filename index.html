@@ -49,60 +49,207 @@
             100% { transform: scale(1); box-shadow: 0 5px 15px rgba(255, 51, 51, 0.4); }
         }
         h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 25px; background: linear-gradient(to right, var(--kairah-gold), var(--soft-blush)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        <!-- ===== NEW CORE SECTION: WHAT KAIRAH STUDIO DOES ===== -->
-<section style="padding: 80px 0; background-color: rgba(42, 5, 42, 0.9);">
-    <div class="container">
-        <h2 style="font-size: 3rem; color: var(--kairah-gold); text-align: center; margin-bottom: 20px;">
-            What Kairāh Studio Actually <span style="text-decoration: underline;">DOES</span>
+        <!-- ===== WHAT KAIRAH STUDIO DOES ===== -->
+<section style="padding: 100px 0; background: linear-gradient(135deg, var(--dark-plum) 0%, #1a051a 100%); position: relative; overflow: hidden;">
+    <!-- Background elements -->
+    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, var(--kairah-gold) 0%, transparent 70%); opacity: 0.03;"></div>
+    <div style="position: absolute; bottom: -150px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, var(--soft-blush) 0%, transparent 70%); opacity: 0.02;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+        <h2 style="font-size: 3.5rem; color: var(--kairah-gold); text-align: center; margin-bottom: 20px; text-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+            <i class="fas fa-play-circle"></i> KAIRAH STUDIO DOES ONE THING PERFECTLY:
         </h2>
-        <p style="font-size: 1.5rem; text-align: center; margin-bottom: 60px; color: #ddd; max-width: 1000px; margin-left: auto; margin-right: auto;">
-            In simple terms: You describe any scene in plain English. Within 60 seconds, Kairāh generates a <strong>cinematic-quality video</strong> that looks like it was shot by a Hollywood studio. No film crew. No actors. No million-dollar budget.
+        <p style="font-size: 2rem; text-align: center; margin-bottom: 60px; color: var(--soft-blush); font-weight: 300; max-width: 1000px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+            Turn <span style="color: var(--kairah-gold); font-weight: 700;">ANY text description</span> into <span style="color: var(--urgent-red); font-weight: 700;">cinematic, 4K video</span> in under 60 seconds.
         </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 30px;">
-            <!-- Core Function 1 -->
-            <div style="text-align: center; padding: 35px 25px; background: linear-gradient(145deg, rgba(255,204,0,0.1), rgba(255,182,193,0.05)); border-radius: 20px; border: 1px solid rgba(255,204,0,0.3);">
-                <div style="font-size: 4rem; margin-bottom: 25px; color: var(--kairah-gold);">
-                    <i class="fas fa-keyboard"></i>
+        
+        <!-- Visual Process Flow -->
+        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px; margin: 60px 0; padding: 40px; background: rgba(0,0,0,0.4); border-radius: 20px; border: 2px solid rgba(255,204,0,0.3);">
+            <!-- Step 1 -->
+            <div style="text-align: center; flex: 1; min-width: 200px;">
+                <div style="width: 80px; height: 80px; background: var(--urgent-red); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: white; font-weight: 900;">
+                    1
                 </div>
-                <h3 style="color: var(--soft-blush); font-size: 1.8rem; margin-bottom: 20px;">1. Text-to-Cinematic Video</h3>
-                <ul style="text-align: left; list-style: none; font-size: 1.1rem; line-height: 1.8;">
-                    <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--kairah-gold); font-weight: bold;">→</span>
-                        <strong>Input:</strong> "A samurai meditates under a cherry blossom tree at sunrise, 4K, cinematic, slow motion."
-                    </li>
-                    <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--kairah-gold); font-weight: bold;">→</span>
-                        <strong>Output:</strong> A 10-second, 4K video with photorealistic details, accurate physics on falling petals, and volumetric lighting.
-                    </li>
-                    <li style="padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--kairah-gold); font-weight: bold;">→</span>
-                        <strong>Time:</strong> 45 seconds. Not 45 minutes.
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Core Function 2 -->
-            <div style="text-align: center; padding: 35px 25px; background: linear-gradient(145deg, rgba(255,204,0,0.1), rgba(255,182,193,0.05)); border-radius: 20px; border: 1px solid rgba(255,204,0,0.3);">
-                <div style="font-size: 4rem; margin-bottom: 25px; color: var(--kairah-gold);">
-                    <i class="fas fa-sliders-h"></i>
+                <h3 style="color: var(--soft-blush); margin-bottom: 15px; font-size: 1.5rem;">You Type A Prompt</h3>
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; font-family: monospace; color: var(--kairah-gold);">
+                    "A cyberpunk detective chases a hacker through neon Tokyo rain"
                 </div>
-                <h3 style="color: var(--soft-blush); font-size: 1.8rem; margin-bottom: 20px;">2. Full Creative Control</h3>
-                <ul style="text-align: left; list-style: none; font-size: 1.1rem; line-height: 1.8;">
-                    <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--kairah-gold); font-weight: bold;">→</span>
-                        <strong>Camera Control:</strong> Simulate drone shots, dolly zooms, or handheld movement.
-                    </li>
-                    <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--kairah-gold); font-weight: bold;">→</span>
-                        <strong>Style Transfer:</strong> Make it look like a Wes Anderson film, a cyberpunk anime, or a vintage 35mm reel.
-                    </li>
-                    <li style="padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0; color: var(--kairah-gold); font-weight: bold;">→</span>
-                        <strong>Character Consistency:</strong> Maintain the same person across multiple scenes—impossible for Sora/Veo.
-                    </li>
-                </ul>
             </div>
+            
+            <!-- Arrow -->
+            <div style="font-size: 3rem; color: var(--kairah-gold);">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            
+            <!-- Step 2 -->
+            <div style="text-align: center; flex: 1; min-width: 200px;">
+                <div style="width: 80px; height: 80px; background: var(--kairah-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: black; font-weight: 900;">
+                    2
+                </div>
+                <h3 style="color: var(--soft-blush); margin-bottom: 15px; font-size: 1.5rem;">Kairāh Generates</h3>
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; color: #ccc;">
+                    4K video with accurate physics, lighting, and motion
+                </div>
+            </div>
+            
+            <!-- Arrow -->
+            <div style="font-size: 3rem; color: var(--kairah-gold);">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            
+            <!-- Step 3 -->
+            <div style="text-align: center; flex: 1; min-width: 200px;">
+                <div style="width: 80px; height: 80px; background: var(--soft-blush); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--dark-plum); font-weight: 900;">
+                    3
+                </div>
+                <h3 style="color: var(--soft-blush); margin-bottom: 15px; font-size: 1.5rem;">You Download & Use</h3>
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; color: #ccc;">
+                    Commercial rights included. No royalties. Yours forever.
+                </div>
+            </div>
+        </div>
+
+        <!-- Concrete Examples Grid -->
+        <div style="margin: 80px 0;">
+            <h3 style="font-size: 2.5rem; color: var(--kairah-gold); text-align: center; margin-bottom: 50px;">
+                <i class="fas fa-vial"></i> REAL-WORLD EXAMPLES:
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+                <!-- Example 1 -->
+                <div style="background: rgba(255,204,0,0.1); border-radius: 15px; overflow: hidden; border: 2px solid var(--kairah-gold);">
+                    <div style="background: var(--kairah-gold); padding: 20px; text-align: center;">
+                        <h4 style="color: black; margin: 0; font-size: 1.3rem; font-weight: 900;">
+                            <i class="fas fa-youtube"></i> FOR YOUTUBE CREATORS
+                        </h4>
+                    </div>
+                    <div style="padding: 30px;">
+                        <p style="color: #ccc; margin-bottom: 20px; font-size: 1.1rem;">
+                            <strong>Problem:</strong> Need engaging B-roll for your tutorials but lack time/money for filming.
+                        </p>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <div style="color: var(--kairah-gold); font-size: 0.9rem; margin-bottom: 5px;">YOU TYPE:</div>
+                            <div style="color: white; font-family: monospace;">"Drone shot flying over a futuristic city at golden hour, 4K, smooth motion"</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px;">
+                            <div style="color: #00cc00; font-size: 0.9rem; margin-bottom: 5px;">KAIRAH CREATES:</div>
+                            <div style="color: white;">A 15-second cinematic establishing shot. Use it as your intro. Done in 45 seconds.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Example 2 -->
+                <div style="background: rgba(255,51,51,0.1); border-radius: 15px; overflow: hidden; border: 2px solid var(--urgent-red);">
+                    <div style="background: var(--urgent-red); padding: 20px; text-align: center;">
+                        <h4 style="color: white; margin: 0; font-size: 1.3rem; font-weight: 900;">
+                            <i class="fas fa-shopping-cart"></i> FOR E-COMMERCE
+                        </h4>
+                    </div>
+                    <div style="padding: 30px;">
+                        <p style="color: #ccc; margin-bottom: 20px; font-size: 1.1rem;">
+                            <strong>Problem:</strong> Need to showcase your product in multiple settings without expensive photoshoots.
+                        </p>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <div style="color: var(--kairah-gold); font-size: 0.9rem; margin-bottom: 5px;">YOU TYPE:</div>
+                            <div style="color: white; font-family: monospace;">"A smartphone floating in a minimalist studio, rotating slowly, product highlight"</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px;">
+                            <div style="color: #00cc00; font-size: 0.9rem; margin-bottom: 5px;">KAIRAH CREATES:</div>
+                            <div style="color: white;">A 10-second product video with perfect lighting. Use it on Amazon, Instagram, your website.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Example 3 -->
+                <div style="background: rgba(255,182,193,0.1); border-radius: 15px; overflow: hidden; border: 2px solid var(--soft-blush);">
+                    <div style="background: var(--soft-blush); padding: 20px; text-align: center;">
+                        <h4 style="color: var(--dark-plum); margin: 0; font-size: 1.3rem; font-weight: 900;">
+                            <i class="fas fa-briefcase"></i> FOR MARKETING AGENCIES
+                        </h4>
+                    </div>
+                    <div style="padding: 30px;">
+                        <p style="color: #ccc; margin-bottom: 20px; font-size: 1.1rem;">
+                            <strong>Problem:</strong> Client needs 30 Instagram Reels this month. Budget: $2,000. Timeline: 2 weeks.
+                        </p>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                            <div style="color: var(--kairah-gold); font-size: 0.9rem; margin-bottom: 5px;">YOU TYPE (IN BATCH):</div>
+                            <div style="color: white; font-family: monospace;">30 different prompts for a coffee brand's social media campaign</div>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px;">
+                            <div style="color: #00cc00; font-size: 0.9rem; margin-bottom: 5px;">KAIRAH CREATES:</div>
+                            <div style="color: white;">30 unique videos in 30 minutes. Bill client $3,000. Profit: $1,000 + lifetime tool access.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Specs -->
+        <div style="background: rgba(0,0,0,0.6); border-radius: 20px; padding: 40px; margin: 60px 0; border: 2px solid var(--kairah-gold);">
+            <h3 style="font-size: 2rem; color: var(--kairah-gold); text-align: center; margin-bottom: 40px;">
+                <i class="fas fa-cogs"></i> TECHNICAL SPECIFICATIONS
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--kairah-gold); margin-bottom: 15px;">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div style="font-size: 1.8rem; font-weight: 900; color: white;">4K Resolution</div>
+                    <div style="color: #ccc; margin-top: 10px;">True 4096×2160 output</div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--urgent-red); margin-bottom: 15px;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div style="font-size: 1.8rem; font-weight: 900; color: white;">60-Second Generation</div>
+                    <div style="color: #ccc; margin-top: 10px;">10x faster than Sora/Veo</div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--soft-blush); margin-bottom: 15px;">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div style="font-size: 1.8rem; font-weight: 900; color: white;">Unlimited Generations</div>
+                    <div style="color: #ccc; margin-top: 10px;">No credits, no limits</div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: #00cc00; margin-bottom: 15px;">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div style="font-size: 1.8rem; font-weight: 900; color: white;">Lifetime Commercial</div>
+                    <div style="color: #ccc; margin-top: 10px;">Own everything you create</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Key Difference -->
+        <div style="text-align: center; margin-top: 70px;">
+            <div style="display: inline-block; padding: 30px 50px; background: linear-gradient(135deg, rgba(255,51,51,0.2), rgba(255,204,0,0.2)); border-radius: 20px; border: 3px solid var(--urgent-red); max-width: 900px;">
+                <h3 style="color: var(--kairah-gold); font-size: 2rem; margin-bottom: 25px;">
+                    <i class="fas fa-exclamation-triangle"></i> HERE'S WHAT MAKES KAIRĀH DIFFERENT
+                </h3>
+                <p style="font-size: 1.4rem; line-height: 1.6; color: #fff; margin-bottom: 30px;">
+                    Sora and Veo 3 are <strong>rental services</strong>—you pay monthly for limited credits with no ownership.<br>
+                    <span style="color: var(--kairah-gold); font-weight: 900; font-size: 1.6rem;">Kairāh Studio is a permanent asset you own.</span><br>
+                    Your one-time Founder's License gives you <strong>unlimited generations, permanent commercial rights, and all future technology</strong>—forever.
+                </p>
+                
+                <!-- Mini CTA within section -->
+                <div style="margin-top: 40px;">
+                    <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main" style="font-size: 1.5rem; padding: 20px 50px; display: inline-block;">
+                        <i class="fas fa-hand-point-right"></i> I UNDERSTAND THE POWER - SECURE LIFETIME ACCESS NOW
+                    </a>
+                    <p style="margin-top: 20px; color: #aaa; font-size: 1rem;">
+                        <i class="fas fa-shield-alt"></i> <strong>Founder's Guarantee:</strong> Your license is permanent. If development stops, 200% refund.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- Core Function 3 -->
             <div style="text-align: center; padding: 35px 25px; background: linear-gradient(145deg, rgba(255,204,0,0.1), rgba(255,182,193,0.05)); border-radius: 20px; border: 1px solid rgba(255,204,0,0.3);">
