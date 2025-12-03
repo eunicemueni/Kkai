@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairāh Studio - Founder's Access | Fund the Future of AI Video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dark-plum: #2a052a;
+            --dark-plum-light: #3a153a;
+            --kairah-gold: #ffcc00;
+            --urgent-red: #ff3333;
+            --soft-blush: #ffb6c1;
+            --white: #ffffff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--dark-plum); color: var(--white); overflow-x: hidden; line-height: 1.6; }
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        .main-header {
+            background: linear-gradient(135deg, var(--dark-plum) 0%, #1a051a 100%);
+            padding: 25px 0;
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 3px solid var(--kairah-gold);
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo-text { font-size: 32px; font-weight: 900; background: linear-gradient(45deg, var(--kairah-gold), var(--soft-blush)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .countdown-header {
+            background-color: rgba(255, 0, 0, 0.15); border: 2px solid var(--urgent-red); border-radius: 12px;
+            padding: 15px 25px; text-align: center;
+        }
+        .countdown-timer { font-size: 28px; font-weight: 900; color: var(--urgent-red); letter-spacing: 2px; }
+        
+        /* Hero */
+        .hero-section { padding: 80px 0 60px; background: radial-gradient(circle at 30% 20%, var(--dark-plum-light) 0%, var(--dark-plum) 70%); text-align: center; }
+        .hero-badge {
+            display: inline-block; background: linear-gradient(45deg, var(--urgent-red), #ff6600); color: white;
+            padding: 10px 25px; border-radius: 50px; font-weight: 800; margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 5px 15px rgba(255, 51, 51, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 5px 20px rgba(255, 51, 51, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 5px 15px rgba(255, 51, 51, 0.4); }
+        }
+        h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 25px; background: linear-gradient(to right, var(--kairah-gold), var(--soft-blush)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        
+        /* Urgency */
+        .spots-remaining {
+            text-align: center; font-size: 1.8rem; margin: 40px auto; padding: 25px;
+            background-color: rgba(255, 0, 0, 0.2); border-radius: 15px; border: 3px solid var(--urgent-red);
+            max-width: 800px; font-weight: 900;
+        }
+        .spots-remaining .highlight { color: var(--kairah-gold); font-size: 2.5rem; }
+        
+        /* CTA Button */
+        .cta-button-main {
+            display: inline-block; background: linear-gradient(45deg, var(--kairah-gold), var(--kairah-gold));
+            color: #000; padding: 25px 60px; font-size: 1.8rem; font-weight: 900; border-radius: 15px;
+            text-decoration: none; border: 3px solid transparent; cursor: pointer; transition: all 0.3s ease;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); margin: 20px 10px;
+        }
+        .cta-button-main:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); border-color: var(--white); }
+        
+        /* Video */
+        .video-wrapper {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px;
+            margin: 40px 0; border: 3px solid var(--kairah-gold); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        
+        /* Pricing */
+        .pricing-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin: 60px 0; }
+        .pricing-card {
+            background-color: rgba(0, 0, 0, 0.5); border-radius: 20px; padding: 40px 30px; text-align: center;
+            position: relative; border: 2px solid var(--dark-plum-light);
+        }
+        .pricing-card.featured { border: 3px solid var(--kairah-gold); transform: scale(1.05); }
+        .pricing-badge {
+            position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+            background: linear-gradient(45deg, var(--urgent-red), #ff6600); color: white;
+            padding: 10px 25px; border-radius: 50px; font-weight: 800;
+        }
+        .price { font-size: 4.5rem; font-weight: 900; color: var(--white); margin-bottom: 10px; }
+        .price span { font-size: 2rem; vertical-align: super; }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 30px;
+            border-left: 5px solid var(--soft-blush); margin: 20px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .header-content { flex-direction: column; gap: 20px; }
+            .pricing-card.featured { transform: none; }
+            .countdown-timer { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-text">KAIRĀH STUDIO</div>
+                    <div style="color: #aaa; letter-spacing: 3px;">FOUNDER'S ACCESS</div>
+                </div>
+                <div class="countdown-header">
+                    <div style="font-size: 14px; color: var(--soft-blush);">FOUNDER'S LIST CLOSES IN:</div>
+                    <div class="countdown-timer" id="countdown-timer">72:00:00</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-badge"><i class="fas fa-crown"></i> FINAL FOUNDER'S REGISTRATION</div>
+            <h1>Become a Founding Owner of <br>The AI Video Engine That Makes Sora & Veo 3 Obsolete</h1>
+            <p style="font-size: 1.8rem; margin-bottom: 40px; color: #ddd; max-width: 800px; margin-left: auto; margin-right: auto;">
+                This is NOT a pre-order. This is your <strong>ONLY chance</strong> to secure a <span style="color: var(--kairah-gold);">LIFETIME COMMERCIAL LICENSE</span> before we close the founder's list forever and switch to monthly subscriptions.
+            </p>
+            
+            <div class="spots-remaining">
+                <i class="fas fa-users"></i> <span class="highlight" id="spots-counter">47</span> FOUNDER'S SPOTS LEFT OF 100 TOTAL
+                <div style="font-size: 1rem; margin-top: 10px; color: var(--soft-blush);">Spots are closing within hours. Do not delay.</div>
+            </div>
+            
+            <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main">
+                <i class="fas fa-gem"></i> CLAIM MY FOUNDER'S LIFETIME LICENSE - $97
+            </a>
+            
+            <div style="display: inline-flex; align-items: center; gap: 15px; background-color: rgba(0, 100, 0, 0.2); padding: 20px 30px; border-radius: 12px; margin-top: 30px; border: 2px solid #00aa00;">
+                <i class="fas fa-shield-alt" style="color: #00aa00; font-size: 1.5rem;"></i>
+                <div>
+                    <strong>100% FOUNDER'S GUARANTEE:</strong> Your lifetime license is permanently locked. If development stops, you get a full refund + $100.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 1 -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; color: var(--kairah-gold); text-align: center; margin-bottom: 20px;">This Is What You're Backing</h2>
+            <p style="font-size: 1.4rem; text-align: center; margin-bottom: 40px; color: #ccc; max-width: 800px; margin-left: auto; margin-right: auto;">
+                A raw technology preview from our development build. This is the engine your founder's license will grant you permanent access to.
+            </p>
+            
+            <div class="video-wrapper">
+                <iframe src="https://streamable.com/e/q53j4k?autoplay=1&loop=0&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            </div>
+            
+            <div style="background-color: rgba(255, 215, 0, 0.05); padding: 25px; border-radius: 15px; margin-top: 30px; border-left: 5px solid var(--kairah-gold);">
+                <p style="font-size: 1.2rem;">
+                    <strong style="color: var(--kairah-gold);">Founder's Note:</strong> This video was generated by our current development build. As a founding owner, you will receive <strong>every improvement, update, and capability enhancement</strong> we develop—from this point forward—at no additional cost. Your $97 is not for a product. It's for <strong>permanent ownership</strong> of the most advanced AI video technology roadmap in existence.
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main" style="font-size: 1.5rem; padding: 20px 50px;">
+                    <i class="fas fa-lock"></i> SECURE PERMANENT OWNERSHIP - $97
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 2 & Comparison -->
+    <section style="background-color: rgba(0, 0, 0, 0.3); padding: 80px 0;">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; color: var(--kairah-gold); text-align: center; margin-bottom: 20px;">Why This Isn't Another Sora Clone</h2>
+            <p style="font-size: 1.4rem; text-align: center; margin-bottom: 60px; color: #ccc;">
+                We're solving the problems current AI video tools ignore.
+            </p>
+            
+            <div class="video-wrapper">
+                <iframe src="https://streamable.com/e/zg9ro2?autoplay=1&loop=0&controls=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px;">
+                <div style="padding: 25px; background-color: rgba(255, 204, 0, 0.1); border-radius: 12px;">
+                    <h3 style="color: var(--kairah-gold); margin-bottom: 15px;"><i class="fas fa-bolt"></i> The Permanent License Advantage</h3>
+                    <p><strong>Sora/Veo Users:</strong> Will pay $120-$300/month forever. <strong>You:</strong> Pay $97 once. In 6 months, they've paid more than you. In 2 years, they've paid over $5,000. You still pay $0.</p>
+                </div>
+                <div style="padding: 25px; background-color: rgba(255, 204, 0, 0.1); border-radius: 12px;">
+                    <h3 style="color: var(--kairah-gold); margin-bottom: 15px;"><i class="fas fa-crown"></i> Founder's Priority</h3>
+                    <p>Your voice will shape development. Founders get voting rights on feature priorities. You're not a customer—you're a <strong>co-owner of the roadmap</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section style="padding: 80px 0; background: radial-gradient(circle at center, var(--dark-plum-light) 0%, var(--dark-plum) 100%);">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; color: var(--kairah-gold); text-align: center; margin-bottom: 20px;">Choose Your Founder's Legacy</h2>
+            <p style="font-size: 1.4rem; text-align: center; margin-bottom: 60px; color: #ccc;">
+                One-time payment. Permanent ownership. No monthly fees ever.
+            </p>
+            
+            <div class="pricing-container">
+                <!-- Tier 1 -->
+                <div class="pricing-card">
+                    <div class="pricing-badge">FOUNDER</div>
+                    <h3 style="font-size: 2rem; color: var(--kairah-gold); margin-bottom: 20px;">Lifetime License</h3>
+                    <div style="font-size: 1.5rem; color: #888; text-decoration: line-through; margin-bottom: 5px;">Future Price: $297/month</div>
+                    <div class="price"><span>$</span>97</div>
+                    <div style="color: #aaa; margin-bottom: 30px;">ONE-TIME PAYMENT • LIFETIME ACCESS</div>
+                    
+                    <ul style="list-style: none; margin: 30px 0; text-align: left;">
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> Permanent Commercial License</li>
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> All Future Updates & Features</li>
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> Founder's Community Access</li>
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: #666;">×</span> Priority Feature Voting</li>
+                    </ul>
+                    
+                    <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main" style="font-size: 1.3rem; padding: 18px 40px; width: 100%; display: block; text-align: center;">
+                        BECOME A FOUNDER
+                    </a>
+                </div>
+                
+                <!-- Tier 2 (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge" style="background: linear-gradient(45deg, #ff3333, #ff6600);">MOST VALUABLE</div>
+                    <h3 style="font-size: 2rem; color: var(--kairah-gold); margin-bottom: 20px;">Visionary Founder</h3>
+                    <div style="font-size: 1.5rem; color: #888; text-decoration: line-through; margin-bottom: 5px;">Value: $2,000+</div>
+                    <div class="price"><span>$</span>197</div>
+                    <div style="color: #aaa; margin-bottom: 30px;">ONE-TIME PAYMENT • ULTIMATE ACCESS</div>
+                    
+                    <ul style="list-style: none; margin: 30px 0; text-align: left;">
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> <strong>EVERYTHING IN FOUNDER, PLUS:</strong></li>
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> Priority Feature Voting Rights</li>
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> Exclusive Mastermind Access</li>
+                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;"><span style="position: absolute; left: 0; color: var(--kairah-gold);">✓</span> 1-Year Direct Developer Support</li>
+                    </ul>
+                    
+                    <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main" style="font-size: 1.3rem; padding: 18px 40px; width: 100%; display: block; text-align: center; background: linear-gradient(45deg, #ff6600, #ff3333);">
+                        <i class="fas fa-crown"></i> BECOME A VISIONARY
+                    </a>
+                    
+                    <div style="margin-top: 20px; padding: 15px; background-color: rgba(255, 51, 51, 0.1); border-radius: 10px; text-align: center;">
+                        <p style="font-weight: 700; color: var(--urgent-red);"><i class="fas fa-bolt"></i> 68% OF FOUNDERS CHOOSE THIS</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spots-remaining">
+                <i class="fas fa-exclamation-triangle"></i> <span class="highlight" id="spots-counter-2">47</span> SPOTS REMAIN AT THIS PRICE
+                <div style="font-size: 1rem; margin-top: 10px;">When these spots fill, the founder's list closes permanently. The next opportunity will be a $297/month subscription with no lifetime option.</div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main">
+                    <i class="fas fa-gem"></i> YES! I CLAIM PERMANENT OWNERSHIP - $97
+                </a>
+                <p style="margin-top: 20px; color: #aaa;"><i class="fas fa-lock"></i> Secure 256-bit SSL Checkout • Founder's Guarantee Applies</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="padding: 100px 0; text-align: center; background-color: rgba(0, 0, 0, 0.5);">
+        <div class="container">
+            <h2 style="font-size: 3rem; color: var(--urgent-red); margin-bottom: 30px;">This Is Your Final Warning</h2>
+            <p style="font-size: 1.8rem; max-width: 900px; margin: 0 auto 40px; line-height: 1.5;">
+                When the <strong>100th founder</strong> secures their license, this page will be taken down. The technology you've seen will become available only through <strong>monthly subscriptions starting at $297</strong>.
+            </p>
+            <p style="font-size: 1.8rem; margin-bottom: 50px; color: var(--kairah-gold); font-weight: 900;">
+                You are choosing between <span style="color: var(--urgent-red);">$97 once</span> or <span style="color: var(--urgent-red);">$3,564 every year</span> for the same technology.
+            </p>
+            
+            <a href="https://www.jvzoo.com/b/0/429715/6" class="cta-button-main" style="font-size: 2.2rem; padding: 30px 80px;">
+                <i class="fas fa-skull-crossbones"></i> BECOME FOUNDER #48 NOW
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // 72-Hour Countdown
+        let countdownTime = 72 * 60 * 60;
+        function updateCountdown() {
+            countdownTime--;
+            let hours = Math.floor(countdownTime / 3600);
+            let minutes = Math.floor((countdownTime % 3600) / 60);
+            let seconds = countdownTime % 60;
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            document.getElementById('countdown-timer').textContent = `${hours}:${minutes}:${seconds}`;
+            if (countdownTime <= 0) clearInterval(countdownInterval);
+        }
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Dynamic Spots Counter (Creates Urgency)
+        let spots = 47;
+        setInterval(() => {
+            if (spots > 0 && Math.random() > 0.7) {
+                spots--;
+                document.getElementById('spots-counter').textContent = spots;
+                document.getElementById('spots-counter-2').textContent = spots;
+                
+                // Increase urgency when spots are low
+                if (spots <= 10) {
+                    document.querySelectorAll('.spots-remaining').forEach(el => {
+                        el.style.animation = 'pulse 1s infinite';
+                    });
+                }
+            }
+        }, 15000); // Randomly decrease approximately every 15 seconds
+    </script>
+</body>
+</html>
